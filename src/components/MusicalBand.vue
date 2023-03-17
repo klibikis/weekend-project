@@ -73,7 +73,7 @@ export default {
       }
     })
     const guitarAudio2 = new Howl({
-      src: ['./guitar2.wav'],
+      src: ['./audio/guitar2.wav'],
       volume: 0.4,
       onend: () => {
         guitarOnM_ID.value = 0
