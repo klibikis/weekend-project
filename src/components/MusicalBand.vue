@@ -286,7 +286,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #4704ff, #4b0bfc4e);
+  background: linear-gradient(180deg, #3afef4, #3afef425);
   clip-path: polygon(20% 0, 22% 0, 80% 100%, 20% 100%);
 }
 .lights__drums {
@@ -313,7 +313,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #ff2525c1, #ff252559);
+  background: linear-gradient(180deg, #E0E722, #e0e72225);
   clip-path: polygon(76% 0, 78% 0, 80% 100%, 20% 100%);
 }
 .lights__illuminate1 {
