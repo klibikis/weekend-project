@@ -9,65 +9,71 @@
         Play demo
       </button>
     </div>
-    <button 
-      @click="$emit('handleBassEventOnZ')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-      >
-      Bass Z
-    </button>
-    <button 
-      @click="$emit('handleDrumsEventOnX')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Drums X
-    </button>
-    <button 
-      @click="$emit('handleDrumsEventOnC')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Drums C
-    </button>
-    <button 
-      @click="$emit('handleSoloEventOnV')"
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Solo V
-    </button>
-    <button 
-      @click="$emit('handleSoloEventOnB')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Solo B
-    </button>
-    <button 
-      @click="$emit('handleGuitarEventOnN')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Guitar N
-    </button>
-    <button 
-      @click="$emit('handleGuitarEventOnM')" 
-      class="btn-instruments" 
-      :disabled="isDemoPlaying"
-    >
-      Guitar M
-    </button>
-    <div class="toggler__wrapper">
-      <p class="temperature-units--text">Party mode</p>
-      <label class="switch">
-        <input 
-          type="checkbox" 
-          v-on:change="$emit('handleStrobeMode')" 
-        />
-        <span class="slider round"></span>
-      </label>
-    </div>
+    <div class="controls__buttons-wrapper">
+        <button 
+          @click="$emit('handleBassEventOnZ')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+          >
+          Bass Z
+        </button>
+        <button 
+          @click="$emit('handleDrumsEventOnX')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Drums X
+        </button>
+        <button 
+          @click="$emit('handleDrumsEventOnC')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Drums C
+        </button>
+        <button 
+          @click="$emit('handleSoloEventOnV')"
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Solo V
+        </button>
+        <button 
+          @click="$emit('handleSoloEventOnB')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Solo B
+        </button>
+        <button 
+          @click="$emit('handleGuitarEventOnN')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Guitar N
+        </button>
+        <button 
+          @click="$emit('handleGuitarEventOnM')" 
+          class="btn-instruments" 
+          :disabled="isDemoPlaying"
+        >
+          Guitar M
+        </button>
+      </div>
+      <div class="controls__info-wrapper">
+        <p>Click button or press corresponding key!</p>
+      </div>
+      <div class="toggler__wrapper">
+        <p class="temperature-units--text">Party mode</p>
+        <label class="switch">
+          <input 
+            type="checkbox" 
+            v-on:change="$emit('handleStrobeMode')" 
+          />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
   </div>
 </template>
 
@@ -85,6 +91,29 @@ export default {
 </script>
 
 <style scoped>
+.controls__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.controls__buttons-wrapper{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  gap: 5px;
+}
+.controls__info-wrapper{
+  color: white
+}
+.instrument-buttons-section__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.instrument-buttons__wrapper{
+  display: flex;
+}
 .btn-instruments {
   all: unset;
   background-color: rgba(255, 255, 255, 0.719);
