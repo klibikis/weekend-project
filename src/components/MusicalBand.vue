@@ -58,7 +58,7 @@ export default {
       }
     })
     const drumAudio2 = new Howl({
-      src: ['/public/audio/drum2.wav'],
+      src: ['./audio/drum2.wav'],
       volume: 0.4,
       onend: () => {
         drumsOnC_ID.value = 0
@@ -73,7 +73,7 @@ export default {
       }
     })
     const guitarAudio2 = new Howl({
-      src: ['/public/guitar2.wav'],
+      src: ['./guitar2.wav'],
       volume: 0.4,
       onend: () => {
         guitarOnM_ID.value = 0
