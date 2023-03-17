@@ -51,7 +51,7 @@ export default {
     const guitarOnM_ID = ref(0)
 
     const drumAudio1 = new Howl({
-      src: ['./public/audio/drum1.mp3'],
+      src: ['./audio/drum1.mp3'],
       onend: () => {
         drumsOnX_ID.value = 0
         isInstrumentPlaying.drums = false
@@ -66,14 +66,14 @@ export default {
       }
     })
     const guitarAudio1 = new Howl({
-      src: ['./public/audio/guitar1.wav'],
+      src: ['./audio/guitar1.wav'],
       onend: () => {
         guitarOnN_ID.value = 0
         isInstrumentPlaying.guitar = false
       }
     })
     const guitarAudio2 = new Howl({
-      src: ['/public/audio/guitar2.wav'],
+      src: ['/public/guitar2.wav'],
       volume: 0.4,
       onend: () => {
         guitarOnM_ID.value = 0
@@ -81,7 +81,7 @@ export default {
       }
     })
     const soloAudio1 = new Howl({
-      src: ['./public/audio/solo1.wav'],
+      src: ['./audio/solo1.wav'],
       volume: 0.5,
       onend: () => {
         soloOnV_ID.value = 0
@@ -89,7 +89,7 @@ export default {
       }
     })
     const soloAudio2 = new Howl({
-      src: ['./public/audio/solo2.wav'],
+      src: ['./audio/solo2.wav'],
       volume: 0.5,
       onend: () => {
         soloOnB_ID.value = 0
@@ -97,7 +97,7 @@ export default {
       }
     })
     const bassAudio1 = new Howl({
-      src: ['./public/audio/bass1.wav'],
+      src: ['./audio/bass1.wav'],
       volume: 0.7,
       onend: () => {
         isInstrumentPlaying.bass = false
