@@ -10,6 +10,7 @@
   </div>
   <ControlsMenu
     :isDemoPlaying="isDemoPlaying"
+    :isInstrumentPlaying="isInstrumentPlaying"
     @handleBassEventOnZ="handleBassEventOnZ"
     @handleDrumsEventOnX="handleDrumsEventOnX"
     @handleDrumsEventOnC="handleDrumsEventOnC"
@@ -211,25 +212,25 @@ export default {
     onMounted(() => {
       handleRightStrobe()
       window.addEventListener('keyup', function (event) {
-        if (event.key == 'z') {
+        if (event.key == 'z' && !isDemoPlaying.value) {
           handleBassEventOnZ()
         }
-        if (event.key == 'x') {
+        if (event.key == 'x' && !isDemoPlaying.value) {
           handleDrumsEventOnX()
         }
-        if (event.key == 'c') {
+        if (event.key == 'c' && !isDemoPlaying.value) {
           handleDrumsEventOnC()
         }
-        if (event.key == 'v') {
+        if (event.key == 'v' && !isDemoPlaying.value) {
           handleSoloEventOnV()
         }
-        if (event.key == 'b') {
+        if (event.key == 'b' && !isDemoPlaying.value) {
           handleSoloEventOnB()
         }
-        if (event.key == 'n') {
+        if (event.key == 'n' && !isDemoPlaying.value) {
           handleGuitarEventOnN()
         }
-        if (event.key == 'm') {
+        if (event.key == 'm' && !isDemoPlaying.value) {
           handleGuitarEventOnM()
         }
       })

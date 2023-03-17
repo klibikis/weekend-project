@@ -4,7 +4,7 @@
       <button 
         class="btn-instruments" 
         @click="$emit('handleDemoPlay')" 
-        :disabled="isDemoPlaying"
+        :disabled="isDemoPlaying || isInstrumentPlaying.bass || isInstrumentPlaying.drums || isInstrumentPlaying.solo || isInstrumentPlaying.guitar"
       >
         Play demo
       </button>
@@ -75,7 +75,11 @@
 
 export default {
   props: {
-    isDemoPlaying: Boolean
+    isDemoPlaying: Boolean,
+    isInstrumentPlaying: {
+      type: Object,
+      default: () => ({}),
+    }
   }
 }
 </script>
